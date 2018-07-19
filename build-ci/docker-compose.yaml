@@ -5,7 +5,7 @@ services:
     build:
       context: jenkins/
     ports:
-      - 8090:8080
+      - 8084:8080
     volumes:
       - jenkins_data:/var/jenkins_home
       - /usr/local/bin/docker:/usr/local/bin/docker  
@@ -19,7 +19,7 @@ services:
     volumes:
       - nexus_data:/nexus-data
     ports:
-      - 8091:8081
+      - 8085:8081
     networks:
       - backend
 
