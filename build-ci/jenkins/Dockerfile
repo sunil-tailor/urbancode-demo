@@ -10,7 +10,7 @@ apt-get -y install apt-transport-https \
 apt-get update 
 # COPY plugins.txt /usr/share/jenkins/plugins.txt
 # RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
-RUN wget -O /opt/udclient.zip http://localhost:8080/tools/udclient.zip --no-check-certificate && \
+RUN wget -O /opt/udclient.zip http://10.0.0.38:8080/tools/udclient.zip --no-check-certificate && \
     unzip /opt/udclient.zip -d /opt/udclient && \
     chown -R jenkins:jenkins /opt && chmod +x /opt/udclient/udclient/udclient
 
