@@ -5,9 +5,6 @@ shopt -s expand_aliases
 udclient createVersion -component JPetStore-APP -name -$VERSION
 udclient addVersionFiles -component JPetStore-APP -version $VERSION -base $ARTIFACT_DIR
 
-# Create a snapshot detailing the versions to deploy
-udclient createSnapshot new-snapshot.json
-
 # Trigger the application process to start the deployment
 udclient requestApplicationProcess application-process-request.json
 
