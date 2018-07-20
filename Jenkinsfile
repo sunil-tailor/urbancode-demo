@@ -25,6 +25,7 @@ node {
        export URBANCODE_SERVER_URL=10.0.0.38
        export VERSION=1.1
        export ARTIFACT_DIR=$WORKSPACE/jpetstore-6-master/target/
+       chmod +x $WORKSPACE/jpetstore-6-master/urbancode/urbancode.sh
        $WORKSPACE/jpetstore-6-master/urbancode/urbancode.sh
        """
    }
