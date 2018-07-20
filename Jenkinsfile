@@ -20,4 +20,12 @@ node {
       archive 'target/*.jar'
       nexusArtifactUploader artifacts: [[artifactId: 'jpetstore', classifier: '', file: 'jpetstore-6-master/target/jpetstore.war', type: 'war']], credentialsId: 'nexus', groupId: 'org.mybatis', nexusUrl: '10.0.0.38:8085', nexusVersion: 'nexus3', protocol: 'http', repository: 'jPetStore', version: '6.0.3-SNAPSHOT'
    }
+   stage('UrbanCode') {
+       sh """
+       export URBANCODE_SERVER_URL=10.0.0.38
+       export VERSION=1.1
+       export ARTIFACT_DIR=$WORKSPACE/jpetstore-6-master/target/
+       $WORKSPACE/jpetstore-6-master/urbancode/urbancode.sh
+       """
+   }
 }
