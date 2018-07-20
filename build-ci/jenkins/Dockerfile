@@ -5,6 +5,7 @@ apt-get -y install apt-transport-https \
      ca-certificates \
      curl \
      gnupg2 \
+     maven \
      software-properties-common && \
 apt-get update 
 # COPY plugins.txt /usr/share/jenkins/plugins.txt
