@@ -24,7 +24,7 @@ node('udclient') {
    stage('UrbanCode') {
        sh """
        export URBANCODE_SERVER_URL=10.0.0.38
-       export VERSION=1.1
+       export VERSION=1.2
        export ARTIFACT_DIR=$WORKSPACE/jpetstore-6-master/target/
        export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.171-8.b10.amzn2.x86_64/jre
        chmod +x $WORKSPACE/jpetstore-6-master/urbancode/urbancode.sh
