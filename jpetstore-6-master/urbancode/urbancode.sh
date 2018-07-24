@@ -5,5 +5,5 @@ udclient createVersion -component JPetStore-APP -name $VERSION
 udclient addVersionFiles -component JPetStore-APP -version $VERSION -base $ARTIFACT_DIR
 
 # Trigger the application process to start the deployment
-udclient requestApplicationProcess $WORKSPACE/jpetstore-6-master/urbancode/application-process-request.json
+# udclient requestApplicationProcess $WORKSPACE/jpetstore-6-master/urbancode/application-process-request.json
 
